@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Contact Us - Word Bounce Mania</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto 40px;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Inputs */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00ffd5, #00aaff);
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Email box */
+.email-box {
+    text-align: center;
+    margin-bottom: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>📬 Contact Us</h1>
+</div>
+
+<div class="container">
+<div class="card">
+
+<p>If you have any questions or issues, feel free to contact us.</p>
+
+<div class="email-box">
+📧 vakhariyajeet3105@gmail.com
+</div>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<textarea id="message" rows="4" placeholder="Your Message"></textarea>
+
+<button onclick="sendMail()">Send Message 🚀</button>
+
+</div>
+</div>
+
+<script>
+function sendMail() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var subject = "Word Bounce Mania Support";
+    var body = "Name: " + name + "%0AEmail: " + email + "%0A%0A" + message;
+
+    window.location.href =
+        "mailto:vakhariyajeet3105@gmail.com?subject=" + subject + "&body=" + body;
+}
+</script>
+
+</body>
+</html>
